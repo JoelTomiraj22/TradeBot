@@ -13,3 +13,7 @@ BASE_URL = "https://testnet.binancefuture.com"
 
 SIGNALS_FILE = os.path.join(os.path.dirname(__file__), "signals.json")
 POLL_INTERVAL = 2  # seconds between signal file checks
+
+# Auto position sizing: risk this fraction of USDT balance per trade.
+# Set to None to disable (quantity must then be provided in the signal).
+RISK_PCT = float(os.environ.get("RISK_PCT", "0.01"))  # 1% default

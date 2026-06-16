@@ -8,8 +8,9 @@ Signal file format (signals.json):
         "action": "open_trade",       // "open_trade" | "update_sl_tp" | "close_trade"
         "symbol": "BTCUSDT",
         "side": "BUY",                // "BUY" (long) | "SELL" (short)
-        "quantity": 0.01,
-        "leverage": 10,
+        "usdt_amount": 10,            // USDT to spend (default $10) — auto-calculates quantity
+        "quantity": null,             // OR specify exact quantity (overrides usdt_amount)
+        "leverage": 10,               // default 10x
         "margin_type": "ISOLATED",
         "entry_type": "MARKET",       // "MARKET" | "LIMIT"
         "entry_price": null,          // required for LIMIT
